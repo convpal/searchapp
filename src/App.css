@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+button {
+  padding: 0.6em 1.5em ;
+  margin: 10px 5px 5px 5px ; 
+}
+
+header {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.container {
+  top: 108px;
+  position: relative;
+}
+
+label {
+  color: white;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-wrapper {
+  display: inline;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+.span {
+  position: relative;
+  height: 50px;
+}
+
+.spin::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: #1c87c9;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 40px;
+  will-change: transform;
+}
+
+#list {
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  background: white;
+  color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 1px 1px 1px 1px #888888;
+}
+
+.suggestions,
+.suggestions-clear {
+  display: list-item;
+  width: 290px;
+  padding: 5px;
+}
+
+.suggestions:hover {
+  background: gray;
+}
